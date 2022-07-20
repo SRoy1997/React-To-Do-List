@@ -1,5 +1,7 @@
 import { Component } from "react";
 
+import TodoItem from "./TodoItem";
+
 class App extends Component {
   constructor() {
     super();
@@ -10,24 +12,30 @@ class App extends Component {
     };
   }
 
+  componentDidMount() {
+    this.setState({
+      todos: [{ id: 1, title: "Test todo items", done: false }],
+    });
+  }
+
+  renderTodos() {
+    return this.state.todos.map((todo) => {
+      return <TodoItem key={todo.id} {...todo} />;
+    });
+  }
+
   render() {
     return (
       <div className="app">
-        <h1>To-Do List</h1>
+        <p className="title">To-Do List</p>
 
         <form className="add-todo">
-          <input type="text" placehoder="Add To-Do" />
+          <input type="text" placeholder="Add To-Do" />
 
           <button>Add</button>
         </form>
 
-        <div className="todo-item">
-          <input type="checkbox" className="checkbox" />
-
-          <p className="description">To-Do Item Description</p>
-
-          <button className="cancel-btn">X</button>
-        </div>
+        {this.renderTodos()}
       </div>
     );
   }

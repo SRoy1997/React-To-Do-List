@@ -12,10 +12,15 @@
   align-items: center;
   justify-content: center;
   background-color: #454544;
-  width: 400px;
+  width: 550px;
   border-radius: 10px;
   box-shadow: 5px 5px 5px #999;
   padding: 30px;
+}
+
+.title {
+  font-size: 45px;
+  font-weight: bold;
 }
 
 .add-todo {
@@ -23,6 +28,7 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 15px;
+  width: 500px;
 }
 
 .add-todo input,
@@ -34,20 +40,29 @@ button {
   outline: none;
 }
 
+.add-todo input {
+  width: 300px;
+}
+
 button {
   cursor: pointer;
 }
 
 .add-todo ::placeholder {
   padding: 4px;
+  font-size: 16px;
 }
 
 .add-todo button {
   border: none;
   border-radius: 5px;
-  height: 25px;
+  height: 29px;
   outline: none;
   background-color: #00a2c4;
+  margin-left: 10px;
+  font-size: 16px;
+  padding: 5px;
+  width: 50px;
 }
 
 .add-todo button:active {
@@ -61,6 +76,19 @@ button {
   justify-content: center;
 }
 
-.todo-item .description {
+.todo-item p {
   margin-right: 50px;
+  font-size: 18px;
+}
+
+.done {
+  color: black;
+  text-decoration: line-through;
+}
+
+.todo-item .cancel-btn {
+  background-color: #00a2c4;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
 }
