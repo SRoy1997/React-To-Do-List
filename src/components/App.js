@@ -24,7 +24,7 @@ class App extends Component {
     id++;
 
     this.setState((state, props) => ({
-      todos: [{ id, title: state.todo, done: false }, ...state.todos],
+      todos: [{ id: this.id, title: state.todo, done: false }, ...state.todos],
       todo: "",
     }));
   }
