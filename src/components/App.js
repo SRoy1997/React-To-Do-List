@@ -2,6 +2,8 @@ import { Component } from "react";
 
 import TodoItem from "./TodoItem";
 
+let id = 0;
+
 class App extends Component {
   constructor() {
     super();
@@ -19,8 +21,10 @@ class App extends Component {
   handleSubmit(e) {
     e.preventDefault();
 
+    id++;
+
     this.setState((state, props) => ({
-      todos: [{ title: state.todo, done: false }, ...state.todos],
+      todos: [{ id, title: state.todo, done: false }, ...state.todos],
       todo: "",
     }));
   }
@@ -31,14 +35,14 @@ class App extends Component {
     });
   }
 
-  handleDelete(title) {
+  handleDelete(id) {
     this.setState((state, props) => ({
-      todos: state.todos.filter((todo) => todo.title !== title),
+      todos: state.todos.filter((todo) => todo.id !== id),
     }));
   }
 
   renderTodos() {
-    return this.state.todos.map((todo) => {
+    return this.state.todos.map((todo, idx) => {
       return (
         <TodoItem key={todo.id} {...todo} handleDelete={this.handleDelete} />
       );

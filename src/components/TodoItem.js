@@ -30,7 +30,7 @@ export default class TodoItem extends Component {
 
         <button
           className="cancel-btn"
-          onClick={() => this.props.handleDelete(this.props.title)}
+          onClick={() => this.props.handleDelete(this.props.id)}
         >
           X
         </button>
