@@ -10,17 +10,38 @@ class App extends Component {
       todo: "",
       todos: [],
     };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
-  componentDidMount() {
+  handleSubmit(e) {
+    e.preventDefault();
+
+    this.setState((state, props) => ({
+      todos: [{ title: state.todo, done: false }, ...state.todos],
+      todo: "",
+    }));
+  }
+
+  handleChange(e) {
     this.setState({
-      todos: [{ id: 1, title: "Test todo items", done: false }],
+      todo: e.target.value,
     });
+  }
+
+  handleDelete(title) {
+    this.setState((state, props) => ({
+      todos: state.todos.filter((todo) => todo.title !== title),
+    }));
   }
 
   renderTodos() {
     return this.state.todos.map((todo) => {
-      return <TodoItem key={todo.id} {...todo} />;
+      return (
+        <TodoItem key={todo.id} {...todo} handleDelete={this.handleDelete} />
+      );
     });
   }
 
@@ -29,8 +50,14 @@ class App extends Component {
       <div className="app">
         <p className="title">To-Do List</p>
 
-        <form className="add-todo">
-          <input type="text" placeholder="Add To-Do" />
+        <form className="add-todo" onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            name="todo"
+            placeholder="Add To-Do"
+            onChange={this.handleChange}
+            value={this.state.todo}
+          />
 
           <button>Add</button>
         </form>

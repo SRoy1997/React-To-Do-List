@@ -72,13 +72,14 @@ button {
 .todo-item {
   display: flex;
   align-items: center;
-  width: 80%;
-  justify-content: center;
+  width: 370px;
+  justify-content: flex-start;
+  font-size: 18px;
 }
 
 .todo-item p {
-  margin-right: 50px;
-  font-size: 18px;
+  padding-right: 10%;
+  color: white;
 }
 
 .done {
@@ -87,8 +88,13 @@ button {
 }
 
 .todo-item .cancel-btn {
+  /* display: flex; */
+  /* align-items: center; */
   background-color: #00a2c4;
   width: 25px;
   height: 25px;
   border-radius: 5px;
+  /* margin-left: 100px; */
+  /* justify-content: center; */
+  justify-items: right;
 }

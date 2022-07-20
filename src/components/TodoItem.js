@@ -28,7 +28,12 @@ export default class TodoItem extends Component {
 
         <p className={this.state.done ? "done" : ""}>{this.props.title}</p>
 
-        <button className="cancel-btn">X</button>
+        <button
+          className="cancel-btn"
+          onClick={() => this.props.handleDelete(this.props.title)}
+        >
+          X
+        </button>
       </div>
     );
   }
