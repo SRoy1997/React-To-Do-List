@@ -5,16 +5,20 @@
   color: #00a2c4;
 }
 
+button {
+  cursor: pointer;
+}
+
 .app {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #454544;
+  background-color: #5b9199;
   width: 550px;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px #999;
+  box-shadow: 5px 5px 5px #b8bdbf;
   padding: 30px;
 }
 
@@ -29,44 +33,40 @@
   align-items: center;
   padding-bottom: 15px;
   width: 500px;
-}
 
-.add-todo input,
-button {
-  border: none;
-  border-radius: 5px;
-  background-color: white;
-  height: 25px;
-  outline: none;
-}
+  input,
+  button {
+    border: none;
+    border-radius: 5px;
+    background-color: b8bdbf;
+    height: 25px;
+    outline: none;
+  }
 
-.add-todo input {
-  width: 300px;
-}
+  input {
+    width: 300px;
+  }
 
-button {
-  cursor: pointer;
-}
+  ::placeholder {
+    padding: 4px;
+    font-size: 16px;
+  }
 
-.add-todo ::placeholder {
-  padding: 4px;
-  font-size: 16px;
-}
+  button {
+    border: none;
+    border-radius: 5px;
+    height: 29px;
+    outline: none;
+    background-color: #074a5d;
+    margin-left: 10px;
+    font-size: 16px;
+    padding: 5px;
+    width: 50px;
+  }
 
-.add-todo button {
-  border: none;
-  border-radius: 5px;
-  height: 29px;
-  outline: none;
-  background-color: #00a2c4;
-  margin-left: 10px;
-  font-size: 16px;
-  padding: 5px;
-  width: 50px;
-}
-
-.add-todo button:active {
-  background-color: #999;
+  button:active {
+    background-color: #b8bdbf;
+  }
 }
 
 .todo-item {
@@ -75,26 +75,26 @@ button {
   width: 370px;
   justify-content: flex-start;
   font-size: 18px;
-}
 
-.todo-item p {
-  padding-right: 10%;
-  color: white;
-}
+  p {
+    padding-right: 10%;
+    color: white;
+  }
 
-.done {
-  color: black;
-  text-decoration: line-through;
-}
+  .done {
+    color: black;
+    text-decoration: line-through;
+  }
 
-.todo-item .cancel-btn {
-  /* display: flex; */
-  /* align-items: center; */
-  background-color: #00a2c4;
-  width: 25px;
-  height: 25px;
-  border-radius: 5px;
-  /* margin-left: 100px; */
-  /* justify-content: center; */
-  justify-items: right;
+  .cancel-btn {
+    /* display: flex; */
+    /* align-items: center; */
+    background-color: #074a5d;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    /* margin-left: 100px; */
+    /* justify-content: center; */
+    justify-items: right;
+  }
 }

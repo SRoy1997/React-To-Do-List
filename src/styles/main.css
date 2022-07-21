@@ -1,0 +1,142 @@
+#root {
+  font-family: sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #00a2c4;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #5b9199;
+  width: 550px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 5px #b8bdbf;
+          box-shadow: 5px 5px 5px #b8bdbf;
+  padding: 30px;
+}
+
+.title {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.add-todo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 15px;
+  width: 500px;
+}
+
+.add-todo input,
+.add-todo button {
+  border: none;
+  border-radius: 5px;
+  background-color: b8bdbf;
+  height: 25px;
+  outline: none;
+}
+
+.add-todo input {
+  width: 300px;
+}
+
+.add-todo ::-webkit-input-placeholder {
+  padding: 4px;
+  font-size: 16px;
+}
+
+.add-todo :-ms-input-placeholder {
+  padding: 4px;
+  font-size: 16px;
+}
+
+.add-todo ::-ms-input-placeholder {
+  padding: 4px;
+  font-size: 16px;
+}
+
+.add-todo ::placeholder {
+  padding: 4px;
+  font-size: 16px;
+}
+
+.add-todo button {
+  border: none;
+  border-radius: 5px;
+  height: 29px;
+  outline: none;
+  background-color: #074a5d;
+  margin-left: 10px;
+  font-size: 16px;
+  padding: 5px;
+  width: 50px;
+}
+
+.add-todo button:active {
+  background-color: #b8bdbf;
+}
+
+.todo-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 370px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 18px;
+}
+
+.todo-item p {
+  padding-right: 10%;
+  color: white;
+}
+
+.todo-item .done {
+  color: black;
+  text-decoration: line-through;
+}
+
+.todo-item .cancel-btn {
+  /* display: flex; */
+  /* align-items: center; */
+  background-color: #074a5d;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  /* margin-left: 100px; */
+  /* justify-content: center; */
+  justify-items: right;
+}
+/*# sourceMappingURL=main.css.map */

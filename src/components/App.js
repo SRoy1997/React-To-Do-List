@@ -21,7 +21,7 @@ class App extends Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    id++;
+    id = id++;
 
     this.setState((state, props) => ({
       todos: [{ id: this.id, title: state.todo, done: false }, ...state.todos],
